@@ -64,7 +64,7 @@ def Ensemble_member_sel(N,members_num,I_for,d_for):
     inflow_forecast = plt.plot(x=np.arange(1,N+1),y=I_for,colors=['deepskyblue'],stroke_width = 4,opacities = [0.4]*members_num,
                                tooltip=def_tt, display_legend=False,scales={'x': x_sc_1, 'y': y_sc_1})
     inflow_forecast.on_element_click(on_element_click_event_1a)
-    inflow_forecast.on_hover(on_hover_1a)
+#    inflow_forecast.on_hover(on_hover_1a)
     fig_1a = plt.Figure(marks = [inflow_forecast],title = 'Inflow forecast  - Choose a forecast member:',
                         title_style={'fill': 'blue', 'font-size': '20px'},axes=[x_ax_1, y_ax_1],
                         layout={'min_width': '1000px', 'max_height': '300px'},scales={'x': x_sc_1, 'y': y_sc_1})
@@ -72,7 +72,7 @@ def Ensemble_member_sel(N,members_num,I_for,d_for):
     demand_forecast = plt.plot(np.arange(1,N+1),d_for,colors=['lightgreen'],stroke_width = 4,opacities = [0.4]*members_num,
                                tooltip=def_tt,scales={'x': x_sc_1, 'y': y_sc_1})
     demand_forecast.on_element_click(on_element_click_event_1b)
-    demand_forecast.on_hover(on_hover_1b)
+#    demand_forecast.on_hover(on_hover_1b)
     fig_1b = plt.Figure(marks = [demand_forecast],title = 'Demand forecast - Choose a forecast member:', 
                         title_style={'fill': 'dimgray', 'font-size': '20px'},axes=[x_ax_1, y_ax_1],
                         layout={'min_width': '1000px', 'max_height': '300px'},scales={'x': x_sc_1, 'y': y_sc_1})
